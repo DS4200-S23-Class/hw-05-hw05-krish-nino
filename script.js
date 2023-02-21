@@ -82,7 +82,6 @@ window.onload = function() {
             drawScatterPlot();
         });
     });
-        //TODO: add tooltip add point selection
 
     }
     drawScatterPlot();
