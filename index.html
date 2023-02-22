@@ -5,10 +5,11 @@
     <meta charset=utf-8/>
     <title>hw-05</title>
     <link rel="stylesheet" href="style.css">
-    <script src="../js/d3.v6.1.1/d3.min.js"></script>
 </head>
 <h1 id="header">hw-05: Interactive Graph with D3</h1>
 <script src="script.js"></script>
+<script src="../js/d3.v6.1.1/d3.min.js"></script>
+
 
 <div class="container">
     <div class="row">
@@ -16,8 +17,38 @@
             <div id="scatterplot"></div>
         </div>
         <div class="col-4">
-            <p> Last point clicked: </p>
-            <p id="point_select"></p>
+            <span> Last point clicked: </span>
+            <span id="point_select"></span>
+            <form>
+                <label>Select the x coordinate of the point you want to add.</label>
+                    <!-- Drop down menus -->
+                  <select class = "selector" id="x-point">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                  </select>
+                <br><br>
+                <label>Select the y coordinate for the point you want to add.</label>
+                  <select class = "selector" id="y-point">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    </select>
+                <br><br>
+                <button type="button" class = "submit" id="submit">Add point</button>
+                </form>            
         </div>
     </div>
 
