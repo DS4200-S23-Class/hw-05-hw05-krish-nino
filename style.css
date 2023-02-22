@@ -2,6 +2,10 @@
     display: flex;
     flex-wrap: wrap;
 }
+/* center all h1 */
+h1 {
+    text-align: center;
+}
 
 .col-4 {
     flex: 40%;
@@ -15,4 +19,13 @@
 .highlightBorder {
 	stroke: black;
 	stroke-width: 5;
+}
+
+.tooltip {
+
+	position: absolute;
+	border: solid;
+	padding: 2.5px;
+    cursor: pointer;
+
 }
