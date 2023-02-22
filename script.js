@@ -119,8 +119,7 @@ document.getElementById("submit").addEventListener("click", addPoint);
 // add in barchart frame below scatterplot
 let bar = d3.select("#scatterplot").append("svg").attr("width", width).attr("height", height).append("g")
 
-function generateBarPlot() {
-    // create a function to draw the bar plot
+    // begin to generate bar chart from csv data
 	d3.csv("data/bar-data.csv").then((data) => {
 
         // get max y value according to data
@@ -206,10 +205,7 @@ function generateBarPlot() {
 			.on("mouseleave", handleMouseleave);
 
 	});
-}
 
-// call function to generate bar plot when page loads
-generateBarPlot();
 
 
 }
