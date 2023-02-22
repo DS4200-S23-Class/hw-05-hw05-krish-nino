@@ -22,7 +22,7 @@ window.onload = function() {
 
 
         //Read the data
-        d3.csv("../data/scatter-data.csv").then(function(data) {
+        d3.csv("data/scatter-data.csv").then(function(data) {
 
         const X_MAX = d3.max(data, d => {return parseInt(d.x)});
         const Y_MAX = d3.max(data, d => {return parseInt(d.y)});  
