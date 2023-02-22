@@ -21,7 +21,7 @@ h1 {
 	stroke-width: 5;
 }
 
-.tooltip {
+.bartooltip {
 
 	position: absolute;
 	border: solid;

@@ -147,16 +147,16 @@ let bar = d3.select("#scatterplot").append("svg").attr("width", width).attr("hei
       .enter()
       .append("rect")
       .attr("class", "bar")
-      .attr("x", (d) => {
-        return X_SCALE2(d.category) + margin.left;
-      })
       .attr("y", (d) => {
         return Y_SCALE2(d.amount) + margin.bottom;
       })
-      .attr("width", X_SCALE2.bandwidth() - 5)
+      .attr("x", (d) => {
+        return X_SCALE2(d.category) + margin.left;
+      })
       .attr("height", (d) => {
         return height - Y_SCALE2(d.amount);
       })
+      .attr("width", X_SCALE2.bandwidth() - 5)
       .style("fill", "deepskyblue");
 
     // create y-axis
@@ -182,27 +182,27 @@ let bar = d3.select("#scatterplot").append("svg").attr("width", width).attr("hei
     const bartooltip = d3
       .select("#scatterplot")
       .append("div")
-      .attr("class", "tooltip")
+      .attr("class", "bartooltip")
       .style("opacity", 0)
       .style("background-color", "white");
 
     // add mouseover event listeners
-    function handleMouseover(event, d) {
+    function handleMouseover(e, d) {
       // show tooltip when hovered over
       bartooltip.style("opacity", 2);
     }
 
     // add mousemove event listeners
-    function handleMousemove(event, d) {
+    function handleMousemove(e, d) {
       // update tooltip when it moves across
       bartooltip
         .html("Name: " + d.category + "<br>Value: " + d.amount)
-        .style("left", event.pageX + 10 + "px")
-        .style("top", event.pageY - 50 + "px");
+        .style("left", e.pageX + 10 + "px")
+        .style("top", e.pageY - 50 + "px");
     }
 
     // add mouseleave event listeners
-    function handleMouseleave(event, d) {
+    function handleMouseleave(e, d) {
       // hide tooltip
       bartooltip.style("opacity", 0);
     }
